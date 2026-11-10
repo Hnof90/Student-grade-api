@@ -41,4 +41,11 @@ public class StudentController {
  logger.info("Added student: id={}, name={}", s.getId(), s.getName());//log the addition of a new student
  return s;
  }
+
+ @GetMapping("/health")
+public Map<String, String> health() {
+ logger.info("Health check called");
+ return Map.of("status", "UP");
+}
+
 }
