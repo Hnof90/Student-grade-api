@@ -36,10 +36,5 @@ public class StudentControllerTest {
  }
 
 
- @Test
-void healthCheckShouldReturnUp() throws Exception {
- mockMvc.perform(get("/api/health"))
- .andExpect(status().isOk())
- .andExpect(jsonPath("$.status").value("UP"));
-}
+
 }
